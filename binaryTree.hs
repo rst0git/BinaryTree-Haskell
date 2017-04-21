@@ -84,3 +84,18 @@ occurs2 x (Leaf y)             = x == y
 occurs2 x (Node l y r) | x == y = True
                        | x < y = occurs2 x l
                        | x > y = occurs2 x r
+                       
+{-
+
+Examples:
+
+> flatten t
+[1,3,4,5,6,7,9]
+
+> occurs1 1 t
+True
+
+> occurs2 1 t
+True
+
+-}
